@@ -14,6 +14,7 @@ def get_personality_analysis(face_desc: str) -> str:
     prompt += "\n 얼굴 특징 : " + face_desc
 
     client = OpenAI()  # OPENAI_API_KEY 환경변수 지정이 필요
+    #여기서 key를 지정하지 않아도 이미 설정 해놓은 게 있다면 자동으로 찾아서 적용된다
 
     response = client.responses.create(
         model="gpt-4o",  # 사용할 두뇌 지정
